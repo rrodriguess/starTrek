@@ -37,12 +37,12 @@ public class Principal {
 		while(!tripulantes.isEmpty()) {			
 			int pontoX = leiaX(sc);
 			while(pontoX > 10 || pontoX < 1) {
-				System.out.println("Coordenadas Y fora do Quadrante");
+				System.out.println("Coordenada Y fora do Quadrante");
 				pontoX = leiaX(sc);
 			}
 			int pontoY = leiaY(sc);	
 			while(pontoY > 10 || pontoY < 1) {
-				System.out.println("Coordenadas X fora do Quadrante");
+				System.out.println("Coordenada X fora do Quadrante");
 				pontoY = leiaY(sc);
 			}
 			

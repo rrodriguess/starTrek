@@ -23,7 +23,8 @@ public class Principal {
 		Tripulante tripulante3 = criaTripulantes(9,9);	
 		tripulantes.add(tripulante3);
 		
-		
+		System.out.println("           Systema de Busca StarTrek               ");
+		System.out.println("Digite as coodernadas para encontrar os tripulantes");
 		imprimirMatriz(espaco);		
 		
 		rastreie(sc, quadrante, espaco, tripulantes);

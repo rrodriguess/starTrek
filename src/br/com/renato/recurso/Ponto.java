@@ -1,4 +1,4 @@
-package br.com.renato.tecnologia;
+package br.com.renato.recurso;
 
 public class Ponto {
 	private int x; 

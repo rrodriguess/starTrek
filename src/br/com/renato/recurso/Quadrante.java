@@ -1,9 +1,9 @@
-package br.com.renato.tecnologia;
+package br.com.renato.recurso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.renato.objetivo.Tripulante;
+import br.com.renato.model.Tripulante;
 
 public class Quadrante {
 	

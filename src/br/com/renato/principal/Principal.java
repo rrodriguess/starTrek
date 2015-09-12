@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import br.com.renato.objetivo.Tripulante;
-import br.com.renato.tecnologia.Ponto;
-import br.com.renato.tecnologia.Quadrante;
+import br.com.renato.model.Tripulante;
+import br.com.renato.recurso.Ponto;
+import br.com.renato.recurso.Quadrante;
 
 public class Principal {
 

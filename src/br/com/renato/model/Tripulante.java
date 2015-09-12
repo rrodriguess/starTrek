@@ -1,4 +1,4 @@
-package br.com.renato.objetivo;
+package br.com.renato.model;
 
 public class Tripulante {
 	private int x;

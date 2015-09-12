@@ -36,7 +36,15 @@ public class Principal {
 		Quadrante quadranteTemp = new Quadrante();
 		while(!tripulantes.isEmpty()) {			
 			int pontoX = leiaX(sc);
+			while(pontoX > 10 || pontoX < 1) {
+				System.out.println("Coordenadas Y fora do Quadrante");
+				pontoX = leiaX(sc);
+			}
 			int pontoY = leiaY(sc);	
+			while(pontoY > 10 || pontoY < 1) {
+				System.out.println("Coordenadas X fora do Quadrante");
+				pontoY = leiaY(sc);
+			}
 			
 			Ponto ponto = new Ponto(pontoX, pontoY);		
 			quadranteTemp = quadrante.encontrarTripulacao(ponto, tripulantes, espaco);
@@ -57,6 +65,7 @@ public class Principal {
 	}
 
 	private static int leiaY(Scanner sc) {
+		
 		System.out.println("Informe as coordenadas do eixo X: " );
 		int pontoY = sc.nextInt();
 		return pontoY;

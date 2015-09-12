@@ -6,22 +6,12 @@ import java.util.List;
 import br.com.renato.objetivo.Tripulante;
 
 public class Quadrante {
-	private Ponto ponto;
+	
 	private String [][] area;
 	private List<Tripulante> perdidos = new ArrayList<>();
-
 	public static int sinalizadores = 0;
 
-	public Quadrante() {
-	}
-
-	public Ponto getPonto() {
-		return ponto;
-	}
-
-	public void setPonto(Ponto ponto) {
-		this.ponto = ponto;
-	}
+	public Quadrante() {}	
 	
 	public String[][] getArea() {
 		return area;

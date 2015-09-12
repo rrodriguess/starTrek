@@ -8,8 +8,28 @@ import br.com.renato.model.Tripulante;
 import br.com.renato.recurso.Ponto;
 import br.com.renato.recurso.Quadrante;
 
-public class Principal {
+/**
+ * A classe <code>Principal</code> é responsável por controlar 
+ * o sistema, utiliza as classes <i>Tripulante</i>, <i>Quadrante</i>
+ * como recursos para varrer uma matriz 10x10 e encontrar os tripulantes
+ * perdidos. 
+ * 
+ * @author Renato Rodrigues de Mello
+ * @version 1.5
+ * @since 1.0
+ * 
+ * @see Ponto
+ * @see Tripulante
+ * @see Quadrante
+ */
 
+public class Principal {
+	/**
+	 * Método responsável pela ignição do sistema, nele
+	 * ocorre o controle de variavéis locais e instâncias
+	 * para criação do programa.
+	 * @param args
+	 */
 	public static void main(String[] args) {		
 		Scanner sc = new Scanner(System.in);		
 		Quadrante quadrante = new Quadrante();			
@@ -32,7 +52,14 @@ public class Principal {
 		
 		System.out.println("Todos os tripulantes foram encontrados com " + Quadrante.sinalizadores + " sinalizadores");		
 	}
-
+	/**
+	 * Método responsável por rastrear a matriz e vasculhar as adjacencias 
+	 * dos pontos informados pelo usuário. 	 * 
+	 * @param sc
+	 * @param quadrante
+	 * @param espaco
+	 * @param tripulantes
+	 */
 	private static void rastreie(Scanner sc, Quadrante quadrante, String[][] espaco, List<Tripulante> tripulantes) {
 		Quadrante quadranteTemp = new Quadrante();
 		while(!tripulantes.isEmpty()) {			
@@ -57,28 +84,44 @@ public class Principal {
 			imprimirMatrizComValores(quadranteTemp.getArea());
 		}
 	}
-
+	/**
+	 * Método responsável por criar tripulantes
+	 * @param x
+	 * @param y
+	 * @return
+	 */
 	private static Tripulante criaTripulantes(int x, int y) {
 		Tripulante tripulante = new Tripulante();
 		tripulante.setX(x);
 		tripulante.setY(y);
 		return tripulante;
 	}
-
+	/**
+	 * Método responsável por receber a coordenada Y.
+	 * @param sc
+	 * @return
+	 */
 	private static int leiaY(Scanner sc) {
 		
 		System.out.println("Informe as coordenadas do eixo X: " );
 		int pontoY = sc.nextInt();
 		return pontoY;
 	}
-
+	/**
+	 * Método responsável por receber a coordenada X.
+	 * @param sc
+	 * @return
+	 */
 	private static int leiaX(Scanner sc) {
 		
 		System.out.println("Informe as coordenadas do eixo Y: " );
 		int pontoX = sc.nextInt();
 		return pontoX;
 	}
-
+	/**
+	 * Método responsável por imprimir uma matriz sem valor
+	 * @param quadrante
+	 */
 	private static void imprimirMatriz(String[][] quadrante) {
 		System.out.print("////////////////////////////////// - X");
 		System.out.print("\n");
@@ -98,7 +141,11 @@ public class Principal {
 		System.out.print("Y - //////////////////////////////////");
 		System.out.print("\n\n");
 	}
-	
+	/**
+	 * Método responsável por imprimir uma matriz com valores digitados
+	 * e processados pelo sistema.
+	 * @param quadrante
+	 */
 	private static void imprimirMatrizComValores(String[][] quadrante) {
 		System.out.print("////////////////////////////////// - X");
 		System.out.print("\n");
